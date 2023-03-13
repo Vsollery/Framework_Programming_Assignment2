@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Assignment2.ViewModel;
+using Microsoft.Extensions.Logging;
 
 namespace Assignment2;
 
@@ -17,6 +18,8 @@ public static class MauiProgram
 
 #if DEBUG
 		builder.Logging.AddDebug();
+		builder.Services.AddSingleton<MainPage>();
+		builder.Services.AddSingleton<MainViewModel>();
 #endif
 
 		return builder.Build();
