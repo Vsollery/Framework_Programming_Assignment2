@@ -30,5 +30,12 @@ namespace Assignment2.ViewModel
         {
             if(Items.Contains(s)) Items.Remove(s);
         }
+
+        [RelayCommand]
+        async Task Tap(string s)
+        {
+
+            await Shell.Current.GoToAsync($"{nameof(DetailPage)}?Text={s}");
+        }
     }
 }
