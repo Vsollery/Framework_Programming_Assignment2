@@ -24,5 +24,11 @@ namespace Assignment2.ViewModel
             //add item
             Text = string.Empty;
         }
+
+        [RelayCommand]
+        void Delete(string s)
+        {
+            if(Items.Contains(s)) Items.Remove(s);
+        }
     }
 }
